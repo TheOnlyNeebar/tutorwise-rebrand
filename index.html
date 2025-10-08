@@ -8,8 +8,8 @@
   <meta name="keywords" content="tutorwise, brampton tutoring, math tutor, english tutor, science tutor, IEP help, ESL tutoring, one-on-one tutoring" />
   <meta name="author" content="TutorWise" />
 
-  <link rel="icon" href="images/faviconTW.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="faviconTW.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Chewy&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -42,12 +42,6 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
     .logo img {
@@ -115,15 +109,10 @@
     }
 
     header h1 {
-      font-size: 2.3rem;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-      color: #eaf6f6;
+      font-family: 'Chewy', cursive;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
     .cta-btn {
@@ -136,6 +125,7 @@
       border-radius: 8px;
       text-decoration: none;
       transition: 0.3s ease;
+      margin-top: 25px;
     }
 
     .cta-btn:hover {
@@ -209,31 +199,14 @@
       font-size: 1.1rem;
     }
 
-    .contact-card p {
-      color: #333;
-      font-size: 0.95rem;
-    }
-
-    #contact a {
-      color: var(--blue);
+    .contact-card a {
+      color: var(--teal);
       text-decoration: none;
       font-weight: 600;
     }
 
-    #contact .call-now {
-      display: inline-block;
-      background-color: var(--teal);
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      margin-top: 15px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    #contact .call-now:hover {
-      background-color: var(--blue);
+    .contact-card a:hover {
+      text-decoration: underline;
     }
 
     iframe {
@@ -271,7 +244,7 @@
   <!-- Navigation -->
   <nav>
     <div class="logo">
-      <img src="images/TW_logo.png" alt="TutorWise Logo" />
+      <img src="TW_logo.png" alt="TutorWise Logo" />
     </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -287,7 +260,6 @@
   <!-- Hero -->
   <header>
     <h1>From Struggle to Success — The Wise Way</h1>
-    <p>⭐ Call today for a FREE Evaluation!</p>
     <a href="#contact" class="cta-btn">Get Your Free Evaluation</a>
   </header>
 
@@ -324,7 +296,9 @@
     <div class="contact-grid">
       <div class="contact-card">
         <h3>📍 Visit Us</h3>
-        <p>14 Automatic Rd, Unit #34<br>Brampton, ON L6S 5N5</p>
+        <p><a href="https://maps.google.com/?q=14+Automatic+Rd+Unit+34+Brampton+ON+L6S+5N5" target="_blank">
+          14 Automatic Rd, Unit #34<br>Brampton, ON L6S 5N5
+        </a></p>
       </div>
 
       <div class="contact-card">
@@ -334,11 +308,9 @@
 
       <div class="contact-card">
         <h3>📧 Email Us</h3>
-        <p><a href="mailto:tutoringnim@gmail.com">tutoringnim@gmail.com</a></p>
+        <p><a href="mailto:info@tutorwise.ca">info@tutorwise.ca</a></p>
       </div>
     </div>
-
-    <a href="tel:4166190043" class="call-now">📞 Call Now</a>
 
     <!-- Google Maps Embed -->
     <iframe 
@@ -364,7 +336,6 @@
       links.classList.toggle("active");
     });
 
-    // Smooth scroll for CTA button
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
