@@ -8,15 +8,14 @@
   <meta name="keywords" content="tutorwise, brampton tutoring, math tutor, english tutor, science tutor, IEP help, ESL tutoring, one-on-one tutoring" />
   <meta name="author" content="TutorWise" />
 
-  <link rel="icon" href="faviconTW.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Chewy&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/faviconTW.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --teal: #2a9d8f;
       --blue: #00357a;
       --white: #ffffff;
-      --gray: #f7f9fb;
     }
 
     * {
@@ -30,30 +29,43 @@
       background-color: var(--white);
       color: #333;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    /* Navigation */
+    /* Smooth fade-in animation */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Nav */
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 25px;
-      background-color: var(--white);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      background-color: var(--blue);
+      color: var(--white);
       position: sticky;
       top: 0;
       z-index: 1000;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .logo img {
       height: 55px;
       width: auto;
-      animation: logoFade 1s ease-out;
+      transition: transform 0.4s ease;
     }
 
-    @keyframes logoFade {
-      from { opacity: 0; transform: scale(0.8) rotate(-5deg); }
-      to { opacity: 1; transform: scale(1) rotate(0); }
+    .logo img:hover {
+      transform: scale(1.1);
     }
 
     .nav-links {
@@ -64,16 +76,14 @@
 
     .nav-links a {
       text-decoration: none;
-      color: var(--blue);
+      color: var(--white);
       font-weight: 600;
-      transition: all 0.25s ease;
-      padding: 8px 14px;
-      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
     }
 
     .nav-links a:hover {
-      background-color: var(--teal);
-      color: white;
+      color: var(--teal);
       transform: scale(1.1);
     }
 
@@ -81,14 +91,13 @@
       display: none;
       font-size: 26px;
       cursor: pointer;
-      color: var(--blue);
     }
 
     @media (max-width: 768px) {
       .nav-links {
         display: none;
         flex-direction: column;
-        background-color: var(--white);
+        background-color: var(--blue);
         position: absolute;
         top: 65px;
         right: 0;
@@ -106,66 +115,79 @@
       }
 
       .nav-links a {
+        padding: 10px 0;
         text-align: center;
-        padding: 12px;
       }
     }
 
     /* Hero Section */
     header {
       text-align: center;
-      padding: 70px 20px;
+      padding: 80px 20px;
       background: linear-gradient(135deg, var(--teal), var(--blue));
       color: white;
+      animation: fadeInUp 1s ease-in-out;
     }
 
     header h1 {
-      font-family: 'Chewy', cursive;
       font-size: 2.8rem;
+      font-weight: 700;
       margin-bottom: 10px;
       letter-spacing: 1px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+      animation: fadeInUp 1.3s ease-in-out;
     }
 
     .cta-btn {
       display: inline-block;
-      padding: 14px 24px;
+      padding: 16px 28px;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: var(--blue);
       background-color: var(--white);
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
-      transition: 0.3s ease;
-      margin-top: 25px;
+      transition: all 0.3s ease;
+      animation: fadeInUp 1.6s ease-in-out;
     }
 
     .cta-btn:hover {
       background-color: var(--teal);
       color: white;
-      transform: scale(1.05);
+      transform: translateY(-3px);
     }
 
-    /* Content Sections */
+    /* Section */
     section {
       max-width: 1000px;
-      margin: 50px auto;
-      padding: 40px 30px;
+      margin: 60px auto;
+      padding: 50px 30px;
       background-color: var(--white);
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 1.3s ease-in-out;
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
     }
 
     section h2 {
       color: var(--blue);
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       margin-bottom: 15px;
-      text-align: center;
     }
 
     section p {
       font-size: 1.1rem;
       color: #444;
-      text-align: center;
     }
 
     .info-list {
@@ -175,72 +197,73 @@
 
     .info-list li {
       background: rgba(42, 157, 143, 0.1);
-      padding: 10px 15px;
+      padding: 12px 15px;
       margin-bottom: 10px;
       border-radius: 8px;
       font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .info-list li:hover {
+      background: rgba(42, 157, 143, 0.25);
     }
 
     /* Contact Section */
     #contact {
       text-align: center;
-      background-color: var(--gray);
-      border-radius: 12px;
-      padding: 50px 30px;
+      animation: fadeInUp 1.3s ease-in-out;
     }
 
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    .contact-card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-      width: 260px;
-    }
-
-    .contact-card h3 {
+    #contact h2 {
+      font-size: 2rem;
       color: var(--blue);
-      margin-bottom: 10px;
-      font-size: 1.2rem;
     }
 
-    .contact-card p {
-      color: black;
+    #contact p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
       font-size: 1rem;
-      margin-bottom: 10px;
+      animation: fadeInUp 1.3s ease-in-out;
     }
 
-    .contact-btn {
+    .contact-info span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .call-now {
       display: inline-block;
-      padding: 10px 18px;
-      background-color: var(--blue);
+      background-color: var(--teal);
       color: white;
-      font-weight: 600;
-      border: none;
+      padding: 14px 24px;
       border-radius: 8px;
-      cursor: pointer;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
       transition: all 0.3s ease;
     }
 
-    .contact-btn:hover {
-      background-color: var(--teal);
-      transform: scale(1.05);
+    .call-now:hover {
+      background-color: var(--blue);
+      transform: translateY(-3px);
     }
 
     iframe {
       width: 100%;
-      max-width: 600px;
       height: 350px;
       border: none;
       border-radius: 12px;
-      margin-top: 20px;
+      margin-top: 25px;
+      animation: fadeInUp 1.3s ease-in-out;
     }
 
     /* Footer */
@@ -250,7 +273,7 @@
       background-color: var(--blue);
       color: white;
       font-size: 0.9rem;
-      margin-top: 50px;
+      margin-top: 60px;
     }
 
     footer a {
@@ -269,7 +292,7 @@
   <!-- Navigation -->
   <nav>
     <div class="logo">
-      <img src="TW_logo.png" alt="TutorWise Logo" />
+      <img src="images/TW_logo.png" alt="TutorWise Logo" />
     </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -285,10 +308,11 @@
   <!-- Hero -->
   <header>
     <h1>From Struggle to Success — The Wise Way</h1>
+    <p>⭐ Call today for a FREE Evaluation!</p>
     <a href="#contact" class="cta-btn">Get Your Free Evaluation</a>
   </header>
 
-  <!-- Welcome Section -->
+  <!-- Welcome -->
   <section>
     <h2>Welcome to TutorWise</h2>
     <p>
@@ -314,36 +338,22 @@
     </ul>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
     <h2>Get in Touch</h2>
-
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3>Visit Us</h3>
-        <p>14 Automatic Rd, Unit #34<br>Brampton, ON L6S 5N5</p>
-        <button class="contact-btn" onclick="window.open('https://maps.google.com/?q=14+Automatic+Rd+Unit+34+Brampton+ON+L6S+5N5','_blank')">View on Map</button>
-      </div>
-
-      <div class="contact-card">
-        <h3>Call Us</h3>
-        <p>416-619-0043</p>
-        <button class="contact-btn" onclick="window.location.href='tel:4166190043'">Call Now</button>
-      </div>
-
-      <div class="contact-card">
-        <h3>Email Us</h3>
-        <p>info@tutorwise.ca</p>
-        <button class="contact-btn" onclick="window.location.href='mailto:info@tutorwise.ca'">Send Email</button>
-      </div>
+    <div class="contact-info">
+      <span>📍 14 Automatic Rd Unit #34, Brampton, ON L6S 5N5</span>
+      <span>⭐ Airport Rd & Williams Pkwy</span>
+      <span>📞 <a href="tel:4166190043">416-619-0043</a></span>
+      <span>📧 <a href="mailto:tutoringnim@gmail.com">tutoringnim@gmail.com</a></span>
     </div>
+    <a href="tel:4166190043" class="call-now">📞 Call Now</a>
 
     <!-- Google Maps Embed -->
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9303249947825!2d-79.70829632339069!3d43.66662065034552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3fba6c26d0ab%3A0xf1f1f1bbd2f792f!2s14%20Automatic%20Rd%20%2334%2C%20Brampton%2C%20ON%20L6S%205N5!5e0!3m2!1sen!2sca!4v1692989098445!5m2!1sen!2sca"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
+    <iframe
+      src="https://www.google.com/maps?q=14+Automatic+Rd+Unit+34,+Brampton,+ON+L6S+5N5&output=embed"
+      allowfullscreen
+      loading="lazy">
     </iframe>
   </section>
 
