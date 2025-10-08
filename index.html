@@ -2,116 +2,238 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TutorWise | From Struggle to Success - The Wise Way</title>
-  <link rel="icon" href="faviconTW.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TutorWise | Brampton Tutoring Services</title>
+  <meta name="description" content="TutorWise offers personalized in-person tutoring in Brampton for K–12 students. Get a free evaluation today and help your child reach their full potential!" />
+  <meta name="keywords" content="tutorwise, brampton tutoring, math tutor, english tutor, science tutor, IEP help, ESL tutoring, one-on-one tutoring" />
+  <meta name="author" content="TutorWise" />
+
+  <link rel="icon" href="images/faviconTW.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --teal: #2a9d8f;
+      --blue: #00357a;
+      --white: #ffffff;
+    }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background-color: #f9fafc;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--white);
       color: #333;
       line-height: 1.6;
     }
 
-    header {
-      background-color: #254592;
-      color: white;
-      padding: 1rem 0;
-    }
-
+    /* Navigation */
     nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      width: 90%;
-      margin: 0 auto;
+      justify-content: space-between;
+      padding: 15px 25px;
+      background-color: var(--blue);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    nav img {
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
       height: 55px;
+      width: auto;
     }
 
-    nav ul {
+    .nav-links {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 20px;
     }
 
-    nav ul li a {
-      color: white;
+    .nav-links a {
       text-decoration: none;
+      color: var(--white);
       font-weight: 600;
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
     }
 
-    nav ul li a:hover {
-      color: #c1ff72;
-      transform: scale(1.15);
+    .nav-links a:hover {
+      color: var(--teal);
+      transform: scale(1.1);
     }
 
-    .hero {
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--blue);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        border-top: 2px solid var(--teal);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links a {
+        padding: 10px 0;
+        text-align: center;
+      }
+    }
+
+    /* Hero Section */
+    header {
       text-align: center;
-      padding: 4rem 1rem;
-      background: linear-gradient(to bottom, #254592, #1f3775);
+      padding: 70px 20px;
+      background: linear-gradient(135deg, var(--teal), var(--blue));
       color: white;
     }
 
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
       font-weight: 700;
     }
 
-    .hero p {
+    header p {
       font-size: 1.2rem;
-      color: #c1ff72;
+      margin-bottom: 25px;
+      color: #eaf6f6;
     }
 
-    .contact-section {
-      background-color: #fff;
-      padding: 3rem 1rem;
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 24px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--blue);
+      background-color: var(--white);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--teal);
+      color: white;
+    }
+
+    /* Welcome Section */
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px 30px;
+      background-color: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    section h2 {
+      color: var(--blue);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
       text-align: center;
     }
 
-    .contact-section h2 {
-      color: #254592;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    section p {
+      font-size: 1.1rem;
+      color: #444;
+      text-align: center;
     }
 
-    .contact-section p {
+    .info-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .info-list li {
+      background: rgba(42, 157, 143, 0.1);
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
       font-size: 1rem;
-      margin-bottom: 2rem;
-      color: #555;
     }
 
-    .contact-info {
+    /* Contact Section */
+    #contact {
+      text-align: center;
+      background-color: #f7f9fb;
+      border-radius: 12px;
+      padding: 50px 30px;
+    }
+
+    .contact-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
-      margin-bottom: 2rem;
+      margin: 2rem 0;
     }
 
-    .info-card {
-      background: #f3f6fc;
-      padding: 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      max-width: 300px;
+    .contact-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+      width: 260px;
     }
 
-    .info-card h3 {
-      color: #254592;
-      margin-bottom: 0.5rem;
+    .contact-card h3 {
+      color: var(--blue);
+      margin-bottom: 8px;
       font-size: 1.1rem;
+    }
+
+    .contact-card p {
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    #contact a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #contact .call-now {
+      display: inline-block;
+      background-color: var(--teal);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    #contact .call-now:hover {
+      background-color: var(--blue);
     }
 
     iframe {
@@ -120,80 +242,138 @@
       height: 350px;
       border: none;
       border-radius: 12px;
-      margin-top: 1rem;
+      margin-top: 20px;
     }
 
+    /* Footer */
     footer {
-      background-color: #254592;
-      color: white;
       text-align: center;
-      padding: 1rem 0;
-      margin-top: 3rem;
+      padding: 30px 10px;
+      background-color: var(--blue);
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 50px;
     }
 
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
 
-      .info-card {
-        width: 90%;
-      }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <img src="images/TW_logo.png" alt="TutorWise Logo" />
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </nav>
+
+  <!-- Hero -->
   <header>
-    <nav>
-      <img src="TW_logo.png" alt="TutorWise Logo" />
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>From Struggle to Success — The Wise Way</h1>
+    <p>⭐ Call today for a FREE Evaluation!</p>
+    <a href="#contact" class="cta-btn">Get Your Free Evaluation</a>
   </header>
 
-  <section class="hero">
-    <h1>From Struggle to Success — The Wise Way</h1>
-    <p>Helping every student reach their full potential with confidence and care.</p>
+  <!-- Welcome Section -->
+  <section>
+    <h2>Welcome to TutorWise</h2>
+    <p>
+      We specialize in K–12 tutoring in all subjects. Our experienced tutors provide personalized
+      support for IEP and ESL students. Whether you're preparing for exams, transitioning from applied
+      to academic, or just need extra help — we’re here to help your child thrive.
+    </p>
   </section>
 
-  <section class="contact-section" id="contact">
-    <h2>Get in Touch</h2>
-    <p>Have a question or want to learn more about our tutoring programs? Reach out — we’re here to help.</p>
+  <!-- Why Choose Us -->
+  <section>
+    <h2>Why Choose Us</h2>
+    <ul class="info-list">
+      <li>Curriculum-Based Teaching</li>
+      <li>Enhance Learning Skills</li>
+      <li>Dedicated Support for IEP & ESL Students</li>
+      <li>Earn High School Credits</li>
+      <li>Preparation for IB and Gifted Programs</li>
+      <li>One-On-One Tutoring</li>
+      <li>Homework Help and EQAO Preparation</li>
+      <li>Improve Literacy and Numeracy Skills</li>
+      <li>Excel Towards University Success</li>
+    </ul>
+  </section>
 
-    <div class="contact-info">
-      <div class="info-card">
-        <h3>Visit Us</h3>
-        <p>38 The Esplanade, Unit #34<br>Toronto, ON</p>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>📍 Visit Us</h3>
+        <p>14 Automatic Rd, Unit #34<br>Brampton, ON L6S 5N5</p>
       </div>
-      <div class="info-card">
-        <h3>Email Us</h3>
-        <p>info@tutorwise.ca</p>
+
+      <div class="contact-card">
+        <h3>📞 Call Us</h3>
+        <p><a href="tel:4166190043">416-619-0043</a></p>
       </div>
-      <div class="info-card">
-        <h3>Call Us</h3>
-        <p>(416) 555-7890</p>
+
+      <div class="contact-card">
+        <h3>📧 Email Us</h3>
+        <p><a href="mailto:tutoringnim@gmail.com">tutoringnim@gmail.com</a></p>
       </div>
     </div>
 
+    <a href="tel:4166190043" class="call-now">📞 Call Now</a>
+
     <!-- Google Maps Embed -->
     <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.561827084358!2d-79.37435892338923!3d43.64771265328144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d1e8f40a3b%3A0x8eaeeb7a217ef1d1!2s38%20The%20Esplanade%2C%20Toronto%2C%20ON!5e0!3m2!1sen!2sca!4v1692989098445!5m2!1sen!2sca" 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9303249947825!2d-79.70829632339069!3d43.66662065034552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3fba6c26d0ab%3A0xf1f1f1bbd2f792f!2s14%20Automatic%20Rd%20%2334%2C%20Brampton%2C%20ON%20L6S%205N5!5e0!3m2!1sen!2sca!4v1692989098445!5m2!1sen!2sca"
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 TutorWise. All rights reserved.</p>
+    &copy; 2025 TutorWise. All rights reserved.<br />
+    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Visit us on Facebook</a>
   </footer>
+
+  <!-- Script for Mobile Menu + Smooth Scroll -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const links = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      links.classList.toggle("active");
+    });
+
+    // Smooth scroll for CTA button
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
