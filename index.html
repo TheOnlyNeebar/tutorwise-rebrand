@@ -1,1 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TutorWise | Brampton Tutoring Services</title>
+  <meta name="description" content="TutorWise offers personalized in-person tutoring in Brampton for K–12 students. Get a free evaluation today and help your child reach their full potential!" />
+  <meta name="keywords" content="tutorwise, brampton tutoring, math tutor, english tutor, science tutor, IEP help, ESL tutoring, one-on-one tutoring" />
+  <meta name="author" content="TutorWise" />
+
+  <link rel="icon" href="images/faviconTW.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --teal: #2a9d8f;
+      --blue: #00357a;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--white);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 25px;
+      background-color: var(--blue);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--blue);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        border-top: 2px solid var(--teal);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links a {
+        padding: 10px 0;
+        text-align: center;
+      }
+    }
+
+    /* Hero Section */
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, var(--teal), var(--blue));
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 24px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--blue);
+      background-color: var(--white);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--teal);
+      color: white;
+    }
+
+    /* Welcome Section */
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px 30px;
+      background-color: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    section h2 {
+      color: var(--blue);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .info-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .info-list li {
+      background: rgba(42, 157, 143, 0.1);
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    /* Contact Section */
+    #contact {
+      text-align: center;
+    }
+
+    #contact a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #contact .call-now {
+      display: inline-block;
+      background-color: var(--teal);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    #contact .call-now:hover {
+      background-color: var(--blue);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      background-color: var(--blue);
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <img src="images/TW_logo.png" alt="TutorWise Logo" />
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <h1>Empowering Students, One Lesson at a Time</h1>
+    <p>⭐ Call today for a FREE Evaluation!</p>
+    <a href="#contact" class="cta-btn">Get Your Free Evaluation</a>
+  </header>
+
+  <!-- Welcome Section -->
+  <section>
+    <h2>Welcome to TutorWise</h2>
+    <p>
+      We specialize in K–12 tutoring in all subjects. Our experienced tutors provide personalized
+      support for IEP and ESL students. Whether you're preparing for exams, transitioning from applied
+      to academic, or just need extra help — we’re here to help your child thrive.
+    </p>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section>
+    <h2>Why Choose Us</h2>
+    <ul class="info-list">
+      <li>Curriculum-Based Teaching</li>
+      <li>Enhance Learning Skills</li>
+      <li>Dedicated Support for IEP & ESL Students</li>
+      <li>Earn High School Credits</li>
+      <li>Preparation for IB and Gifted Programs</li>
+      <li>One-On-One Tutoring</li>
+      <li>Homework Help and EQAO Preparation</li>
+      <li>Improve Literacy and Numeracy Skills</li>
+      <li>Excel Towards University Success</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p>
+      📍 14 Automatic Rd, Brampton, ON L6S 5N5 <br />
+      ⭐ Airport Rd & Williams Pkwy <br />
+      📞 <a href="tel:4166190043">416-619-0043</a> <br />
+      📧 <a href="mailto:tutoringnim@gmail.com">tutoringnim@gmail.com</a>
+    </p>
+    <a href="tel:4166190043" class="call-now">📞 Call Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 TutorWise. All rights reserved.<br />
+    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Visit us on Facebook</a>
+  </footer>
+
+  <!-- Script for Mobile Menu + Smooth Scroll -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const links = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      links.classList.toggle("active");
+    });
+
+    // Smooth scroll for CTA button
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
 
