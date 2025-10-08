@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | TutorWise</title>
+  <link rel="icon" type="image/png" href="faviconTW.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f8f9fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #254592;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #c1ff72;
+      color: #254592;
+      padding: 5px 10px;
+      border-radius: 6px;
+      transform: scale(1.15);
+    }
+
+    main {
+      padding: 4rem 10%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #254592;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      color: #254592;
+      margin-top: 3rem;
+      font-size: 2rem;
+    }
+
+    .story {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeUp 1s ease;
+    }
+
+    .testimonials {
+      margin-top: 4rem;
+      background-color: #ffffff;
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeUp 1.2s ease;
+    }
+
+    .testimonial {
+      background: #f1f5ff;
+      padding: 1.5rem;
+      border-left: 5px solid #c1ff72;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .testimonial strong {
+      color: #254592;
+    }
+
+    footer {
+      background-color: #254592;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="TW_logo.png" alt="TutorWise Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Our Story</h1>
+    <section class="story">
+      <p><strong>TutorWise</strong> began in 2006 as a home-based tutoring center known as <strong>Diviya Tutoring</strong>. Our roots were built on a deep love for education and a commitment to supporting the local community. Over the years, we’ve proudly supported hundreds of families in Brampton, helping students from all backgrounds reach their full academic potential.</p>
+      <p>As our community grew, so did we — evolving into TutorWise and moving to our dedicated location on Automatic Road. What started with living room whiteboards and dining room desks has become a trusted education hub, known for a warm, personal, and results-driven approach to learning.</p>
+      <p>Families who’ve been with us remember our holiday parties, fun summer camps, and lasting bonds. These aren’t just tutoring sessions — they’re stepping stones in a student’s journey. From IEP learners to high achievers, we treat every student as an individual.</p>
+      <p>At TutorWise, we believe in the power of a strong education. We know that academic results speak louder than words — and we’re proud to say our students consistently show growth, improved grades, and new confidence in themselves.</p>
+    </section>
+
+    <section class="testimonials">
+      <h2>What Parents Are Saying</h2>
+
+      <div class="testimonial">
+        <p>"My son has been going to <strong>TutorWise</strong> for four years now. He started off in an IEP program, and we’ve seen such incredible changes — not only in his academics but in his confidence and motivation too. The teachers here really care." <br><strong>– Mrs. Patel, Brampton</strong></p>
+      </div>
+
+      <div class="testimonial">
+        <p>"We worked with <strong>Nimish</strong> and couldn’t be happier! My daughter’s math grades went up by two levels, and she actually enjoys studying now. TutorWise has made learning fun and effective." <br><strong>– Mr. Sharma, Brampton</strong></p>
+      </div>
+
+      <div class="testimonial">
+        <p>"I was referred by a friend and it’s been such a positive experience. The tutors are patient, organized, and always give me updates about my child’s progress. It feels like a real partnership in my child’s education." <br><strong>– Mrs. Kaur, Brampton</strong></p>
+      </div>
+
+      <div class="testimonial">
+        <p>"We’ve seen such amazing results — from struggle to success truly describes our journey with TutorWise. Highly recommend to any parent who wants quality education and genuine care for their child." <br><strong>– The Singh Family</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TutorWise | Brampton, Ontario</p>
+  </footer>
+
+</body>
+</html>
