@@ -7,8 +7,8 @@
   <meta name="description" content="Explore TutorWise's range of tutoring services for K–12 students in Brampton. Personalized support for Math, English, Science, French, IEP, and ESL learners." />
   <link rel="icon" href="faviconTW.png" type="image/png" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Font (Roboto) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -25,7 +25,7 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: var(--white);
       color: #333;
       line-height: 1.6;
@@ -58,7 +58,7 @@
     }
 
     .nav-links li {
-      background: none; /* ✅ ensures no ghost rectangle */
+      background: none;
     }
 
     .nav-links a {
@@ -66,14 +66,15 @@
       color: var(--blue);
       font-weight: 600;
       padding: 8px 14px;
-      border-radius: 8px;
-      background-color: transparent; /* ✅ no background at rest */
-      transition: background-color 0.25s ease, color 0.25s ease;
+      border-radius: 6px;
+      background-color: transparent;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
+    /* ✅ Keeping only the small darker teal hover effect */
     .nav-links a:hover {
-      background-color: var(--teal);
-      color: var(--white);
+      background-color: rgba(42, 157, 143, 0.2);
+      color: var(--blue);
     }
 
     .menu-toggle {
