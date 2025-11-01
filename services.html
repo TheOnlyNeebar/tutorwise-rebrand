@@ -57,12 +57,17 @@
       gap: 20px;
     }
 
+    .nav-links li {
+      background: none; /* ✅ ensures no ghost rectangle */
+    }
+
     .nav-links a {
       text-decoration: none;
       color: var(--blue);
       font-weight: 600;
       padding: 8px 14px;
       border-radius: 8px;
+      background-color: transparent; /* ✅ no background at rest */
       transition: background-color 0.25s ease, color 0.25s ease;
     }
 
