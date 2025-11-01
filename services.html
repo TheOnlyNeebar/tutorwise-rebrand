@@ -38,26 +38,17 @@
       justify-content: space-between;
       padding: 15px 25px;
       background-color: var(--white);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 1000;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .logo img {
       height: 55px;
       width: auto;
-      animation: logoFloat 3s ease-in-out infinite alternate;
-      transition: transform 0.3s ease;
-    }
-
-    .logo img:hover {
-      transform: scale(1.08) rotate(2deg);
-    }
-
-    @keyframes logoFloat {
-      from { transform: translateY(0px) rotate(0deg); }
-      to { transform: translateY(-4px) rotate(1.5deg); }
+      transition: none;
+      transform: none;
     }
 
     .nav-links {
@@ -71,14 +62,13 @@
       color: var(--blue);
       font-weight: 600;
       transition: all 0.25s ease;
-      padding: 8px 14px;
+      padding: 8px 16px;
       border-radius: 8px;
     }
 
     .nav-links a:hover {
       background-color: var(--teal);
-      color: white;
-      transform: scale(1.1);
+      color: var(--white);
     }
 
     .menu-toggle {
@@ -128,25 +118,13 @@
       font-size: 2.8rem;
       margin-bottom: 10px;
       letter-spacing: 1px;
-      animation: fadeInDown 1.2s ease;
     }
 
     header p {
       font-size: 1.2rem;
-      animation: fadeInUp 1.5s ease;
     }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* CTA Button (matches index) */
+    /* CTA BUTTON */
     .cta-btn {
       display: inline-block;
       padding: 14px 24px;
@@ -163,7 +141,6 @@
     .cta-btn:hover {
       background-color: var(--teal);
       color: white;
-      transform: scale(1.05);
     }
 
     /* SECTIONS */
@@ -211,7 +188,6 @@
 
     li:hover {
       background: rgba(42, 157, 143, 0.2);
-      transform: scale(1.02);
     }
 
     /* FAQ */
