@@ -46,3 +46,249 @@
 
     .logo img {
       height: 55px;
+      width: auto;
+      animation: logoFade 1s ease-out;
+    }
+
+    @keyframes logoFade {
+      from { opacity: 0; transform: scale(0.8) rotate(-5deg); }
+      to { opacity: 1; transform: scale(1) rotate(0); }
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--blue);
+      font-weight: 600;
+      transition: all 0.25s ease;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+
+    .nav-links a:hover {
+      background-color: var(--teal);
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: var(--blue);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--white);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        border-top: 2px solid var(--teal);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links a {
+        text-align: center;
+        padding: 12px;
+      }
+    }
+
+    /* Hero */
+    header {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(135deg, var(--teal), var(--blue));
+      color: white;
+    }
+
+    header h1 {
+      font-family: 'Chewy', cursive;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+
+    /* Contact Section */
+    section {
+      text-align: center;
+      background-color: var(--gray);
+      border-radius: 12px;
+      padding: 50px 30px;
+      max-width: 1000px;
+      margin: 50px auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    section h2 {
+      color: var(--blue);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .contact-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+      width: 260px;
+    }
+
+    .contact-card h3 {
+      color: var(--blue);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .contact-card p {
+      color: black;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: var(--blue);
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      background-color: var(--teal);
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      background-color: var(--blue);
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <img src="TW_logo.png" alt="TutorWise Logo" />
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <h1>Get in Touch with TutorWise</h1>
+    <p>We’d love to hear from you! Contact us today to start your child’s learning journey.</p>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Information</h2>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>📍 Visit Us</h3>
+        <p>14 Automatic Rd, Unit #34<br>Brampton, ON L6S 5N5</p>
+        <button class="contact-btn" onclick="window.open('https://maps.google.com/?q=14+Automatic+Rd+Unit+34+Brampton+ON+L6S+5N5','_blank')">View on Map</button>
+      </div>
+
+      <div class="contact-card">
+        <h3>📞 Call Us</h3>
+        <p>416-619-0043</p>
+        <button class="contact-btn" onclick="window.location.href='tel:4166190043'">Call Now</button>
+      </div>
+
+      <div class="contact-card">
+        <h3>📧 Email Us</h3>
+        <p>info@tutorwise.ca</p>
+        <button class="contact-btn" onclick="window.location.href='mailto:info@tutorwise.ca'">Send Email</button>
+      </div>
+    </div>
+
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9303249947825!2d-79.70829632339069!3d43.66662065034552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3fba6c26d0ab%3A0xf1f1f1bbd2f792f!2s14%20Automatic%20Rd%20%2334%2C%20Brampton%2C%20ON%20L6S%205N5!5e0!3m2!1sen!2sca!4v1692989098445!5m2!1sen!2sca"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 TutorWise. All rights reserved.<br />
+    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Visit us on Facebook</a>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const links = document.getElementById("nav-links");
+    toggle.addEventListener("click", () => links.classList.toggle("active"));
+  </script>
+
+</body>
+</html>
