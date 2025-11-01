@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TutorWise | Our Services</title>
   <meta name="description" content="Explore TutorWise's range of tutoring services for K–12 students in Brampton. Personalized support for Math, English, Science, French, IEP, and ESL learners." />
+  
+  <!-- Favicon -->
   <link rel="icon" href="images/faviconTW.png" type="image/png" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -24,24 +26,35 @@
     }
 
     body {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Roboto', sans-serif;
       background-color: var(--white);
       color: #333;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    /* NAVIGATION */
+    h1, h2, h3, h4 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Nav Bar */
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 25px;
       background-color: var(--white);
+      color: var(--blue);
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 2px solid rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease-in-out;
     }
 
     .logo {
@@ -53,45 +66,37 @@
     .logo img {
       height: 55px;
       width: auto;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease;
     }
 
     .logo img:hover {
-      transform: scale(1.08);
+      transform: scale(1.1);
     }
 
     .nav-links {
       list-style: none;
       display: flex;
       gap: 20px;
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-weight: 600;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--blue);
+      font-weight: 600;
       font-size: 1rem;
-      padding: 8px 10px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      transition: all 0.3s ease;
     }
 
     .nav-links a:hover {
-      background-color: rgba(42, 157, 143, 0.1);
       color: var(--teal);
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
 
     .menu-toggle {
       display: none;
-      font-size: 28px;
+      font-size: 26px;
       cursor: pointer;
-      background: var(--blue);
-      color: var(--white);
-      border: none;
-      border-radius: 6px;
-      padding: 6px 10px;
+      color: var(--blue);
     }
 
     @media (max-width: 768px) {
@@ -100,7 +105,7 @@
         flex-direction: column;
         background-color: var(--white);
         position: absolute;
-        top: 70px;
+        top: 65px;
         right: 0;
         width: 100%;
         padding: 20px 0;
@@ -111,35 +116,38 @@
         display: flex;
       }
 
-      .nav-links a {
-        color: var(--blue);
-        text-align: center;
-      }
-
       .menu-toggle {
         display: block;
       }
+
+      .nav-links a {
+        padding: 10px 0;
+        text-align: center;
+      }
     }
 
-    /* HEADER */
+    /* Header */
     header {
       text-align: center;
       padding: 80px 20px;
       background: linear-gradient(135deg, var(--teal), var(--blue));
       color: white;
+      animation: fadeInUp 1s ease-in-out;
     }
 
     header h1 {
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 2.7rem;
-      margin-bottom: 12px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
     header p {
       font-size: 1.2rem;
+      font-weight: 400;
     }
 
-    /* SECTIONS */
+    /* Sections */
     section {
       max-width: 1000px;
       margin: 60px auto;
@@ -147,6 +155,7 @@
       background-color: var(--white);
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 1.2s ease-in-out;
       transition: transform 0.3s ease;
     }
 
@@ -155,15 +164,17 @@
     }
 
     section h2 {
-      font-family: 'Bricolage Grotesque', sans-serif;
       color: var(--blue);
-      font-size: 2rem;
+      font-size: 1.9rem;
       margin-bottom: 20px;
       text-align: center;
     }
 
+    .service {
+      margin-bottom: 30px;
+    }
+
     .service h3 {
-      font-family: 'Bricolage Grotesque', sans-serif;
       font-size: 1.3rem;
       color: var(--teal);
       margin-bottom: 8px;
@@ -194,8 +205,15 @@
       background: rgba(42, 157, 143, 0.25);
     }
 
+    .faq {
+      margin-top: 25px;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+    }
+
     .faq-item h4 {
-      font-family: 'Bricolage Grotesque', sans-serif;
       color: var(--teal);
       cursor: pointer;
       transition: color 0.3s ease;
@@ -212,7 +230,6 @@
       font-size: 0.95rem;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px 10px;
@@ -248,7 +265,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a></li>
     </ul>
-    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
   </nav>
 
   <!-- Hero -->
@@ -257,7 +274,7 @@
     <p>Helping students from kindergarten to high school reach their full potential.</p>
   </header>
 
-  <!-- Services -->
+  <!-- Services Section -->
   <section>
     <div class="service">
       <h3>✏️ Personalized Tutoring for All K–12 Grades</h3>
@@ -350,10 +367,12 @@
   <script>
     const toggle = document.getElementById("menu-toggle");
     const links = document.getElementById("nav-links");
+
     toggle.addEventListener("click", () => {
       links.classList.toggle("active");
     });
 
+    // FAQ toggle
     const faqItems = document.querySelectorAll('.faq-item h4');
     faqItems.forEach(item => {
       item.addEventListener('click', () => {
@@ -362,5 +381,6 @@
       });
     });
   </script>
+
 </body>
 </html>
