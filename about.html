@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TutorWise | About Us</title>
-  <meta name="description" content="Learn about TutorWise’s history, values, and commitment to student success in Brampton." />
+  <title>TutorWise | Our Services</title>
+  <meta name="description" content="Explore TutorWise's range of tutoring services for K–12 students in Brampton. Personalized support for Math, English, Science, French, IEP, and ESL learners." />
   <link rel="icon" href="faviconTW.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Chewy&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -23,28 +25,30 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: var(--white);
       color: #333;
       line-height: 1.6;
     }
 
-    /* Navigation */
+    /* NAVIGATION */
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 25px;
       background-color: var(--white);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 1000;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     .logo img {
       height: 55px;
       width: auto;
+      transition: none;
+      animation: none;
     }
 
     .nav-links {
@@ -53,18 +57,24 @@
       gap: 20px;
     }
 
+    .nav-links li {
+      background: none; /* ✅ ensures no ghost rectangle */
+    }
+
     .nav-links a {
       text-decoration: none;
       color: var(--blue);
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      transition: all 0.25s ease;
       padding: 8px 14px;
       border-radius: 8px;
+      background-color: transparent;
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
 
     .nav-links a:hover {
       background-color: var(--teal);
-      color: white;
+      color: var(--white);
     }
 
     .menu-toggle {
@@ -101,7 +111,7 @@
       }
     }
 
-    /* Hero */
+    /* HEADER */
     header {
       text-align: center;
       padding: 70px 20px;
@@ -110,12 +120,39 @@
     }
 
     header h1 {
-      font-family: 'Chewy', cursive;
+      font-family: 'Poppins', sans-serif;
       font-size: 2.8rem;
+      font-weight: 700;
       margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
-    /* Story Section */
+    header p {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    /* CTA Button */
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 24px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--blue);
+      background-color: var(--white);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      margin-top: 25px;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--teal);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
     section {
       max-width: 1000px;
       margin: 50px auto;
@@ -126,6 +163,7 @@
     }
 
     section h2 {
+      font-family: 'Poppins', sans-serif;
       color: var(--blue);
       font-size: 1.8rem;
       margin-bottom: 15px;
@@ -133,99 +171,54 @@
     }
 
     section p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #444;
       text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: rgba(42, 157, 143, 0.1);
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    li:hover {
+      background: rgba(42, 157, 143, 0.2);
+      transform: scale(1.02);
+    }
+
+    /* FAQ */
+    .faq-item {
       margin-bottom: 15px;
     }
 
-    /* Testimonials */
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      scroll-snap-type: x mandatory;
-      padding: 20px 0;
-    }
-
-    .testimonial {
-      flex: 0 0 80%;
-      background-color: var(--gray);
-      border-radius: 12px;
-      padding: 25px;
-      scroll-snap-align: center;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    }
-
-    .testimonial p {
-      font-size: 1rem;
-      font-style: italic;
-      color: #333;
-    }
-
-    .testimonial h4 {
-      margin-top: 15px;
-      color: var(--blue);
-      font-weight: 600;
-    }
-
-    /* Contact Section */
-    #contact {
-      text-align: center;
-      background-color: var(--gray);
-      border-radius: 12px;
-      padding: 50px 30px;
-      margin-top: 40px;
-    }
-
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    .contact-card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-      width: 260px;
-    }
-
-    .contact-card h3 {
-      color: var(--blue);
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      padding: 10px 18px;
-      background-color: var(--blue);
-      color: white;
-      font-weight: 600;
-      border: none;
-      border-radius: 8px;
+    .faq-item h4 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--teal);
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
-    .contact-btn:hover {
-      background-color: var(--teal);
-      transform: scale(1.05);
+    .faq-item h4:hover {
+      color: var(--blue);
     }
 
-    iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 350px;
-      border: none;
-      border-radius: 12px;
-      margin-top: 20px;
+    .faq-item p {
+      display: none;
+      margin-top: 8px;
+      color: #555;
+      font-family: 'Roboto', sans-serif;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px 10px;
@@ -256,89 +249,96 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a></li>
     </ul>
     <div class="menu-toggle" id="menu-toggle">☰</div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Header -->
   <header>
-    <h1>Our Story</h1>
+    <h1>Our Services</h1>
+    <p>Helping students from kindergarten to high school reach their full potential.</p>
   </header>
 
-  <!-- About Story -->
+  <!-- Tutoring Overview -->
   <section>
-    <p><strong>TutorWise</strong> began in 2006 as a home-based tutoring center known as Diviya Tutoring. Our roots were built on a deep love for education and a commitment to supporting the local community. Over the years, we’ve proudly supported hundreds of families in Brampton, helping students from all backgrounds reach their full academic potential.</p>
-
-    <p>As our community grew, so did we — evolving into TutorWise and moving to our dedicated location on Automatic Road. What started with living room whiteboards and dining room desks has become a trusted education hub, known for a warm, personal, and results-driven approach to learning.</p>
-
-    <p>Families who’ve been with us remember our holiday parties, fun summer camps, and lasting bonds. These aren’t just tutoring sessions — they’re stepping stones in a student’s journey. From IEP learners to high achievers, we treat every student as an individual.</p>
-
-    <p>At TutorWise, we believe in the power of a strong education. We know that academic results speak louder than words — and we’re proud to say our students consistently show growth, improved grades, and new confidence in themselves.</p>
+    <h2>Personalized Tutoring for K–12 Students</h2>
+    <p>We tailor our approach for every student — from early learners to high school graduates. Whether it’s building confidence in math, improving reading skills, or preparing for exams, TutorWise helps every child learn “the wise way.”</p>
   </section>
 
-  <!-- Testimonials Carousel -->
+  <!-- Grade Levels -->
   <section>
-    <h2>What Parents & Students Say</h2>
-    <div class="carousel">
-      <div class="testimonial">
-        <p>"TutorWise helped my daughter go from struggling in math to getting A’s! The tutors are patient and genuinely care."</p>
-        <h4>— Parent of Grade 8 Student</h4>
-      </div>
-      <div class="testimonial">
-        <p>"I love how they explain things in a way I understand. I used to hate homework, now it feels easy!"</p>
-        <h4>— Grade 6 Student</h4>
-      </div>
-      <div class="testimonial">
-        <p>"We’ve tried other centers, but none matched the personal attention and results TutorWise gave our son."</p>
-        <h4>— Parent of Grade 10 Student</h4>
-      </div>
-      <div class="testimonial">
-        <p>"The tutors are amazing! They really make learning fun and boost your confidence."</p>
-        <h4>— Grade 9 Student</h4>
-      </div>
+    <h2>We Teach All Grade Levels</h2>
+    <ul>
+      <li>Kindergarten – Grade 1</li>
+      <li>Grades 2 – 5</li>
+      <li>Grades 6 – 8 (Middle School)</li>
+      <li>High School (Grades 9 – 12)</li>
+    </ul>
+  </section>
+
+  <!-- Subjects -->
+  <section>
+    <h2>Subjects We Cover</h2>
+    <ul>
+      <li>Mathematics (Basic, Advanced, Calculus)</li>
+      <li>English Language & Writing Skills</li>
+      <li>Science (Biology, Chemistry, Physics)</li>
+      <li>French Language Studies</li>
+      <li>Reading & Literacy Development</li>
+      <li>EQAO, OSSLT, and Exam Preparation</li>
+      <li>University & College Entrance Readiness</li>
+    </ul>
+  </section>
+
+  <!-- How TutorWise Works -->
+  <section>
+    <h2>How TutorWise Works</h2>
+    <p>We start with a free in-person assessment to identify your child’s unique learning needs. Then, we create a personalized tutoring plan and pair your child with an experienced TutorWise educator. Regular updates, skill tracking, and strong communication ensure visible progress and lasting results.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>How do I get started?</h4>
+      <p>Call or visit us to schedule a free evaluation. We’ll assess your child’s strengths and challenges and create a custom plan.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do you offer one-on-one tutoring?</h4>
+      <p>Yes — every session is one-on-one and customized to your child’s goals.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can you help with multiple subjects?</h4>
+      <p>Absolutely! We can support students across several subjects in their tutoring plan.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How often should sessions be scheduled?</h4>
+      <p>We recommend at least two sessions weekly for consistent progress, but plans are flexible.</p>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3>📍 Visit Us</h3>
-        <p>14 Automatic Rd, Unit #34<br>Brampton, ON L6S 5N5</p>
-        <button class="contact-btn" onclick="window.open('https://maps.google.com/?q=14+Automatic+Rd+Unit+34+Brampton+ON+L6S+5N5','_blank')">View on Map</button>
-      </div>
-      <div class="contact-card">
-        <h3>📞 Call Us</h3>
-        <p>416-619-0043</p>
-        <button class="contact-btn" onclick="window.location.href='tel:4166190043'">Call Now</button>
-      </div>
-      <div class="contact-card">
-        <h3>📧 Email Us</h3>
-        <p>info@tutorwise.ca</p>
-        <button class="contact-btn" onclick="window.location.href='mailto:info@tutorwise.ca'">Send Email</button>
-      </div>
-    </div>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9303249947825!2d-79.70829632339069!3d43.66662065034552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3fba6c26d0ab%3A0xf1f1f1bbd2f792f!2s14%20Automatic%20Rd%20%2334%2C%20Brampton%2C%20ON%20L6S%205N5!5e0!3m2!1sen!2sca!4v1692989098445!5m2!1sen!2sca"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>
-
+  <!-- Footer -->
   <footer>
     &copy; 2025 TutorWise. All rights reserved.<br />
     <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Visit us on Facebook</a>
   </footer>
 
+  <!-- JS -->
   <script>
     const toggle = document.getElementById("menu-toggle");
     const links = document.getElementById("nav-links");
     toggle.addEventListener("click", () => links.classList.toggle("active"));
+
+    document.querySelectorAll('.faq-item h4').forEach(item => {
+      item.addEventListener('click', () => {
+        const p = item.nextElementSibling;
+        p.style.display = p.style.display === 'block' ? 'none' : 'block';
+      });
+    });
   </script>
 </body>
 </html>
