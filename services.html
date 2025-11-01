@@ -5,18 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TutorWise | Our Services</title>
   <meta name="description" content="Explore TutorWise's range of tutoring services for K–12 students in Brampton. Personalized support for Math, English, Science, French, IEP, and ESL learners." />
-  
-  <!-- Favicon -->
-  <link rel="icon" href="images/faviconTW.png" type="image/png" />
-  
+  <link rel="icon" href="faviconTW.png" type="image/png" />
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Chewy&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --teal: #2a9d8f;
       --blue: #00357a;
       --white: #ffffff;
+      --gray: #f7f9fb;
     }
 
     * {
@@ -26,51 +25,39 @@
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: var(--white);
       color: #333;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
-    h1, h2, h3, h4 {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Nav Bar */
+    /* NAVIGATION */
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 25px;
       background-color: var(--white);
-      color: var(--blue);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      animation: fadeInUp 1s ease-in-out;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
     .logo img {
       height: 55px;
       width: auto;
-      transition: transform 0.4s ease;
+      animation: logoFloat 3s ease-in-out infinite alternate;
+      transition: transform 0.3s ease;
     }
 
     .logo img:hover {
-      transform: scale(1.1);
+      transform: scale(1.08) rotate(2deg);
+    }
+
+    @keyframes logoFloat {
+      from { transform: translateY(0px) rotate(0deg); }
+      to { transform: translateY(-4px) rotate(1.5deg); }
     }
 
     .nav-links {
@@ -83,12 +70,14 @@
       text-decoration: none;
       color: var(--blue);
       font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
+      padding: 8px 14px;
+      border-radius: 8px;
     }
 
     .nav-links a:hover {
-      color: var(--teal);
+      background-color: var(--teal);
+      color: white;
       transform: scale(1.1);
     }
 
@@ -121,68 +110,89 @@
       }
 
       .nav-links a {
-        padding: 10px 0;
         text-align: center;
+        padding: 12px;
       }
     }
 
-    /* Header */
+    /* HEADER */
     header {
       text-align: center;
-      padding: 80px 20px;
+      padding: 70px 20px;
       background: linear-gradient(135deg, var(--teal), var(--blue));
       color: white;
-      animation: fadeInUp 1s ease-in-out;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
+      font-family: 'Chewy', cursive;
+      font-size: 2.8rem;
       margin-bottom: 10px;
       letter-spacing: 1px;
+      animation: fadeInDown 1.2s ease;
     }
 
     header p {
       font-size: 1.2rem;
-      font-weight: 400;
+      animation: fadeInUp 1.5s ease;
     }
 
-    /* Sections */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* CTA Button (matches index) */
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 24px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--blue);
+      background-color: var(--white);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      margin-top: 25px;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--teal);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
     section {
       max-width: 1000px;
-      margin: 60px auto;
-      padding: 50px 30px;
+      margin: 50px auto;
+      padding: 40px 30px;
       background-color: var(--white);
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      animation: fadeInUp 1.2s ease-in-out;
-      transition: transform 0.3s ease;
-    }
-
-    section:hover {
-      transform: translateY(-5px);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
     section h2 {
       color: var(--blue);
-      font-size: 1.9rem;
-      margin-bottom: 20px;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
       text-align: center;
     }
 
-    .service {
-      margin-bottom: 30px;
-    }
-
-    .service h3 {
-      font-size: 1.3rem;
+    section h3 {
       color: var(--teal);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
     }
 
-    .service p {
-      color: #444;
+    section p {
       font-size: 1rem;
+      color: #444;
+      text-align: center;
     }
 
     ul {
@@ -190,25 +200,21 @@
       padding: 0;
     }
 
-    .grade-section ul li,
-    .subject-section ul li {
+    li {
       background: rgba(42, 157, 143, 0.1);
       padding: 10px 15px;
+      margin: 8px 0;
       border-radius: 8px;
-      margin-bottom: 8px;
       font-size: 1rem;
-      transition: background-color 0.3s ease;
+      transition: 0.3s ease;
     }
 
-    .grade-section ul li:hover,
-    .subject-section ul li:hover {
-      background: rgba(42, 157, 143, 0.25);
+    li:hover {
+      background: rgba(42, 157, 143, 0.2);
+      transform: scale(1.02);
     }
 
-    .faq {
-      margin-top: 25px;
-    }
-
+    /* FAQ */
     .faq-item {
       margin-bottom: 15px;
     }
@@ -216,7 +222,7 @@
     .faq-item h4 {
       color: var(--teal);
       cursor: pointer;
-      transition: color 0.3s ease;
+      transition: 0.3s;
     }
 
     .faq-item h4:hover {
@@ -227,16 +233,16 @@
       display: none;
       margin-top: 8px;
       color: #555;
-      font-size: 0.95rem;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px 10px;
       background-color: var(--blue);
       color: white;
       font-size: 0.9rem;
-      margin-top: 60px;
+      margin-top: 50px;
     }
 
     footer a {
@@ -252,10 +258,10 @@
 
 <body>
 
-  <!-- Nav -->
+  <!-- Navigation -->
   <nav>
     <div class="logo">
-      <img src="images/TW_logo.png" alt="TutorWise Logo" />
+      <img src="TW_logo.png" alt="TutorWise Logo" />
     </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -268,37 +274,20 @@
     <div class="menu-toggle" id="menu-toggle">☰</div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Header -->
   <header>
     <h1>Our Services</h1>
     <p>Helping students from kindergarten to high school reach their full potential.</p>
   </header>
 
-  <!-- Services Section -->
+  <!-- Tutoring Overview -->
   <section>
-    <div class="service">
-      <h3>✏️ Personalized Tutoring for All K–12 Grades</h3>
-      <p>We tailor our tutoring approach for students from kindergarten through Grade 12. Whether your child needs support in math, science, English, or French, we've got them covered.</p>
-    </div>
-
-    <div class="service">
-      <h3>📚 Exam & Test Preparation</h3>
-      <p>From EQAO and OSSLT to high school finals and university entrance exams, we help students build confidence and strategies to succeed.</p>
-    </div>
-
-    <div class="service">
-      <h3>🌟 IEP & ESL Student Support</h3>
-      <p>We specialize in supporting students with Individual Education Plans (IEPs) and those for whom English is a second language. Patience, encouragement, and expert strategies are key.</p>
-    </div>
-
-    <div class="service">
-      <h3>💡 Homework Help & Skill Building</h3>
-      <p>Beyond homework help, we equip students with problem-solving strategies and critical thinking skills that serve them for life.</p>
-    </div>
+    <h2>Personalized Tutoring for K–12 Students</h2>
+    <p>We tailor our approach for every student — from early learners to high school graduates. Whether it’s building confidence in math, improving reading skills, or preparing for exams, TutorWise helps every child learn “the wise way.”</p>
   </section>
 
   <!-- Grade Levels -->
-  <section class="grade-section">
+  <section>
     <h2>We Teach All Grade Levels</h2>
     <ul>
       <li>Kindergarten – Grade 1</li>
@@ -309,12 +298,12 @@
   </section>
 
   <!-- Subjects -->
-  <section class="subject-section">
+  <section>
     <h2>Subjects We Cover</h2>
     <ul>
       <li>Mathematics (Basic, Advanced, Calculus)</li>
       <li>English Language & Writing Skills</li>
-      <li>Science (Biology, Chemistry, Physics, General Science)</li>
+      <li>Science (Biology, Chemistry, Physics)</li>
       <li>French Language Studies</li>
       <li>Reading & Literacy Development</li>
       <li>EQAO, OSSLT, and Exam Preparation</li>
@@ -325,16 +314,7 @@
   <!-- How TutorWise Works -->
   <section>
     <h2>How TutorWise Works</h2>
-    <p>
-      First, you’ll come in for an initial assessment — this helps us understand your child’s strengths,
-      challenges, and learning style. From there, we create a customized learning plan together to target
-      the exact areas that need support.
-    </p>
-    <p>
-      We maintain consistent communication with parents and share updates on progress and any significant
-      academic observations. Homework is assigned based on the student’s goals, and our tutors provide both
-      homework assistance and skill-building exercises to support growth across multiple subjects.
-    </p>
+    <p>We start with a free in-person assessment to identify your child’s unique learning needs. Then, we create a personalized tutoring plan and pair your child with an experienced TutorWise educator. Regular updates, skill tracking, and strong communication ensure visible progress and lasting results.</p>
   </section>
 
   <!-- FAQ -->
@@ -342,19 +322,19 @@
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
       <h4>How do I get started?</h4>
-      <p>Simply call us or visit our center to schedule a free evaluation. We’ll assess your child’s needs and match them with the right tutor.</p>
+      <p>Call or visit us to schedule a free evaluation. We’ll assess your child’s strengths and challenges and create a custom plan.</p>
     </div>
     <div class="faq-item">
       <h4>Do you offer one-on-one tutoring?</h4>
-      <p>Yes! All of our sessions are personalized and focused on individual goals and areas of improvement.</p>
+      <p>Yes — every session is one-on-one and customized to your child’s goals.</p>
     </div>
     <div class="faq-item">
       <h4>Can you help with multiple subjects?</h4>
-      <p>Absolutely. Depending on the student’s goals, we can provide support in several subjects within their plan.</p>
+      <p>Absolutely! We can support students across several subjects in their tutoring plan.</p>
     </div>
     <div class="faq-item">
       <h4>How often should sessions be scheduled?</h4>
-      <p>We recommend at least two sessions per week for consistent progress, but we customize schedules based on the student’s needs.</p>
+      <p>We recommend at least two sessions weekly for consistent progress, but plans are flexible.</p>
     </div>
   </section>
 
@@ -364,23 +344,18 @@
     <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Visit us on Facebook</a>
   </footer>
 
+  <!-- JS -->
   <script>
     const toggle = document.getElementById("menu-toggle");
     const links = document.getElementById("nav-links");
+    toggle.addEventListener("click", () => links.classList.toggle("active"));
 
-    toggle.addEventListener("click", () => {
-      links.classList.toggle("active");
-    });
-
-    // FAQ toggle
-    const faqItems = document.querySelectorAll('.faq-item h4');
-    faqItems.forEach(item => {
+    document.querySelectorAll('.faq-item h4').forEach(item => {
       item.addEventListener('click', () => {
         const p = item.nextElementSibling;
-        p.style.display = p.style.display === "block" ? "none" : "block";
+        p.style.display = p.style.display === 'block' ? 'none' : 'block';
       });
     });
   </script>
-
 </body>
 </html>
