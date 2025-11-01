@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TutorWise | Our Services</title>
-  <meta name="description" content="Explore TutorWise's range of tutoring services for K–12 students in Brampton. Personalized support for Math, English, Science, French, IEP, and ESL learners." />
+  <title>TutorWise | About Us</title>
+  <meta name="description" content="Learn about TutorWise’s history, values, and commitment to student success in Brampton." />
   <link rel="icon" href="faviconTW.png" type="image/png" />
 
   <!-- Google Fonts -->
@@ -63,7 +63,7 @@
       padding: 8px 14px;
       border-radius: 8px;
       background-color: transparent;
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
     }
 
     .nav-links a:hover {
@@ -149,48 +149,65 @@
       font-size: 1rem;
       color: #444;
       text-align: center;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      background: rgba(42, 157, 143, 0.1);
-      padding: 10px 15px;
-      margin: 8px 0;
-      border-radius: 8px;
-      font-family: 'Roboto', sans-serif;
-      transition: 0.3s ease;
-    }
-
-    li:hover {
-      background: rgba(42, 157, 143, 0.2);
-      transform: scale(1.02);
-    }
-
-    /* FAQ */
-    .faq-item {
       margin-bottom: 15px;
     }
 
-    .faq-item h4 {
+    /* CONTACT SECTION */
+    #contact {
+      text-align: center;
+      background-color: var(--gray);
+      border-radius: 12px;
+      padding: 50px 30px;
+      margin-top: 40px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .contact-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+      width: 260px;
+    }
+
+    .contact-card h3 {
       font-family: 'Montserrat', sans-serif;
-      color: var(--teal);
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .faq-item h4:hover {
       color: var(--blue);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
     }
 
-    .faq-item p {
-      display: none;
-      margin-top: 8px;
-      color: #555;
-      font-family: 'Roboto', sans-serif;
+    .contact-btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: var(--blue);
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      background-color: var(--teal);
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 20px;
     }
 
     /* FOOTER */
@@ -233,66 +250,50 @@
 
   <!-- Header -->
   <header>
-    <h1>Our Services</h1>
-    <p>Helping students from kindergarten to high school reach their full potential.</p>
+    <h1>Our Story</h1>
+    <p>Building confidence, inspiring growth, and empowering students — one lesson at a time.</p>
   </header>
 
-  <!-- Tutoring Overview -->
+  <!-- About Section -->
   <section>
-    <h2>Personalized Tutoring for K–12 Students</h2>
-    <p>We tailor our approach for every student — from early learners to high school graduates. Whether it’s building confidence in math, improving reading skills, or preparing for exams, TutorWise helps every child learn “the wise way.”</p>
+    <h2>Where It All Began</h2>
+    <p><strong>TutorWise</strong> started as a small home tutoring business in Brampton — born from a mother’s passion for teaching and helping children succeed. What began as a few students around a dining room table has grown into a dedicated learning centre focused on personalized education.</p>
+
+    <p>Our team believes in more than just improving grades. We focus on building confidence, critical thinking, and a lifelong love for learning. From IEP support to enrichment programs, every student is treated as an individual with their own path to success.</p>
   </section>
 
-  <!-- Grade Levels -->
+  <!-- Mission Section -->
   <section>
-    <h2>We Teach All Grade Levels</h2>
-    <ul>
-      <li>Kindergarten – Grade 1</li>
-      <li>Grades 2 – 5</li>
-      <li>Grades 6 – 8 (Middle School)</li>
-      <li>High School (Grades 9 – 12)</li>
-    </ul>
+    <h2>Our Mission & Values</h2>
+    <p>To create an encouraging learning environment where students feel understood, supported, and empowered to reach their full potential. We believe learning should be fun, rewarding, and deeply personal — because every child learns “the wise way.”</p>
   </section>
 
-  <!-- Subjects -->
-  <section>
-    <h2>Subjects We Cover</h2>
-    <ul>
-      <li>Mathematics (Basic, Advanced, Calculus)</li>
-      <li>English Language & Writing Skills</li>
-      <li>Science (Biology, Chemistry, Physics)</li>
-      <li>French Language Studies</li>
-      <li>Reading & Literacy Development</li>
-      <li>EQAO, OSSLT, and Exam Preparation</li>
-      <li>University & College Entrance Readiness</li>
-    </ul>
-  </section>
-
-  <!-- How TutorWise Works -->
-  <section>
-    <h2>How TutorWise Works</h2>
-    <p>We start with a free in-person assessment to identify your child’s unique learning needs. Then, we create a personalized tutoring plan and pair your child with an experienced TutorWise educator. Regular updates, skill tracking, and strong communication ensure visible progress and lasting results.</p>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h4>How do I get started?</h4>
-      <p>Call or visit us to schedule a free evaluation. We’ll assess your child’s strengths and challenges and create a custom plan.</p>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>📍 Visit Us</h3>
+        <p>14 Automatic Rd, Unit #34<br>Brampton, ON L6S 5N5</p>
+        <button class="contact-btn" onclick="window.open('https://maps.google.com/?q=14+Automatic+Rd+Unit+34+Brampton+ON+L6S+5N5','_blank')">View on Map</button>
+      </div>
+      <div class="contact-card">
+        <h3>📞 Call Us</h3>
+        <p>416-619-0043</p>
+        <button class="contact-btn" onclick="window.location.href='tel:4166190043'">Call Now</button>
+      </div>
+      <div class="contact-card">
+        <h3>📧 Email Us</h3>
+        <p>info@tutorwise.ca</p>
+        <button class="contact-btn" onclick="window.location.href='mailto:info@tutorwise.ca'">Send Email</button>
+      </div>
     </div>
-    <div class="faq-item">
-      <h4>Do you offer one-on-one tutoring?</h4>
-      <p>Yes — every session is one-on-one and customized to your child’s goals.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Can you help with multiple subjects?</h4>
-      <p>Absolutely! We can support students across several subjects in their tutoring plan.</p>
-    </div>
-    <div class="faq-item">
-      <h4>How often should sessions be scheduled?</h4>
-      <p>We recommend at least two sessions weekly for consistent progress, but plans are flexible.</p>
-    </div>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9303249947825!2d-79.70829632339069!3d43.66662065034552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3fba6c26d0ab%3A0xf1f1f1bbd2f792f!2s14%20Automatic%20Rd%20%2334%2C%20Brampton%2C%20ON%20L6S%205N5!5e0!3m2!1sen!2sca!4v1692989098445!5m2!1sen!2sca"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </section>
 
   <!-- Footer -->
@@ -301,18 +302,10 @@
     <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Visit us on Facebook</a>
   </footer>
 
-  <!-- JS -->
   <script>
     const toggle = document.getElementById("menu-toggle");
     const links = document.getElementById("nav-links");
     toggle.addEventListener("click", () => links.classList.toggle("active"));
-
-    document.querySelectorAll('.faq-item h4').forEach(item => {
-      item.addEventListener('click', () => {
-        const p = item.nextElementSibling;
-        p.style.display = p.style.display === 'block' ? 'none' : 'block';
-      });
-    });
   </script>
 </body>
 </html>
