@@ -7,8 +7,8 @@
   <meta name="description" content="Explore TutorWise's range of tutoring services for K–12 students in Brampton. Personalized support for Math, English, Science, French, IEP, and ESL learners." />
   <link rel="icon" href="faviconTW.png" type="image/png" />
 
-  <!-- Google Font (Roboto) -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@500;700&family=Chewy&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -31,24 +31,28 @@
       line-height: 1.6;
     }
 
-    /* NAVIGATION */
+    /* NAVIGATION (Matches Index) */
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 25px;
       background-color: var(--white);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     .logo img {
       height: 55px;
       width: auto;
-      transition: none;
-      animation: none;
+      animation: logoFade 1s ease-out;
+    }
+
+    @keyframes logoFade {
+      from { opacity: 0; transform: scale(0.8) rotate(-5deg); }
+      to { opacity: 1; transform: scale(1) rotate(0); }
     }
 
     .nav-links {
@@ -57,24 +61,20 @@
       gap: 20px;
     }
 
-    .nav-links li {
-      background: none;
-    }
-
     .nav-links a {
       text-decoration: none;
       color: var(--blue);
+      font-family: 'Montserrat', sans-serif;
       font-weight: 600;
       padding: 8px 14px;
-      border-radius: 6px;
-      background-color: transparent;
-      transition: background-color 0.2s ease, color 0.2s ease;
+      border-radius: 8px;
+      transition: all 0.25s ease;
     }
 
-    /* ✅ Keeping only the small darker teal hover effect */
     .nav-links a:hover {
-      background-color: rgba(42, 157, 143, 0.2);
-      color: var(--blue);
+      background-color: var(--teal);
+      color: var(--white);
+      transform: scale(1.1);
     }
 
     .menu-toggle {
@@ -120,35 +120,16 @@
     }
 
     header h1 {
+      font-family: 'Chewy', cursive;
       font-size: 2.8rem;
-      font-weight: 700;
       margin-bottom: 10px;
       letter-spacing: 1px;
     }
 
     header p {
+      font-family: 'Roboto', sans-serif;
       font-size: 1.2rem;
       font-weight: 400;
-    }
-
-    /* CTA Button */
-    .cta-btn {
-      display: inline-block;
-      padding: 14px 24px;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--blue);
-      background-color: var(--white);
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s ease;
-      margin-top: 25px;
-    }
-
-    .cta-btn:hover {
-      background-color: var(--teal);
-      color: white;
-      transform: scale(1.05);
     }
 
     /* SECTIONS */
@@ -162,6 +143,7 @@
     }
 
     section h2 {
+      font-family: 'Montserrat', sans-serif;
       color: var(--blue);
       font-size: 1.8rem;
       margin-bottom: 15px;
@@ -169,6 +151,7 @@
     }
 
     section p {
+      font-family: 'Roboto', sans-serif;
       font-size: 1rem;
       color: #444;
       text-align: center;
@@ -184,7 +167,7 @@
       padding: 10px 15px;
       margin: 8px 0;
       border-radius: 8px;
-      font-size: 1rem;
+      font-family: 'Roboto', sans-serif;
       transition: 0.3s ease;
     }
 
@@ -199,6 +182,7 @@
     }
 
     .faq-item h4 {
+      font-family: 'Montserrat', sans-serif;
       color: var(--teal);
       cursor: pointer;
       transition: 0.3s;
@@ -212,6 +196,7 @@
       display: none;
       margin-top: 8px;
       color: #555;
+      font-family: 'Roboto', sans-serif;
     }
 
     /* FOOTER */
@@ -245,7 +230,6 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a></li>
