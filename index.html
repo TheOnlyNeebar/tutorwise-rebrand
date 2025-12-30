@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TutorWise | Brampton Tutoring Services</title>
-  <meta name="description" content="TutorWise offers personalized in-person tutoring in Brampton for K–12 students. Get a Free 15-Minute Parent Strategy Call today and help your child reach their full potential!" />
+  <meta name="description" content="TutorWise offers personalized in-person tutoring in Brampton for K–12 students. Book a Free 15-Minute Parent Strategy Call today and help your child reach their full potential!" />
   <meta name="keywords" content="tutorwise, brampton tutoring, math tutor, english tutor, science tutor, IEP help, ESL tutoring, one-on-one tutoring" />
   <meta name="author" content="TutorWise" />
 
@@ -77,6 +78,44 @@
       transform: scale(1.1);
     }
 
+    /* NEW: Nav CTA (phone + call button) */
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .phone-link {
+      text-decoration: none;
+      color: var(--blue);
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 2px solid rgba(0, 53, 122, 0.12);
+      transition: 0.25s ease;
+    }
+
+    .phone-link:hover {
+      background: rgba(42, 157, 143, 0.12);
+      border-color: rgba(42, 157, 143, 0.35);
+    }
+
+    .call-cta {
+      text-decoration: none;
+      background: var(--blue);
+      color: white;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 10px;
+      transition: 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .call-cta:hover {
+      background: var(--teal);
+      transform: scale(1.03);
+    }
+
     .menu-toggle {
       display: none;
       font-size: 26px;
@@ -109,6 +148,9 @@
         text-align: center;
         padding: 12px;
       }
+
+      /* keep it clean on mobile */
+      .phone-link { display: none; }
     }
 
     /* Hero Section */
@@ -124,6 +166,22 @@
       font-size: 2.8rem;
       margin-bottom: 10px;
       letter-spacing: 1px;
+    }
+
+    /* NEW: hero subtext + two CTAs */
+    .hero-subtext {
+      max-width: 760px;
+      margin: 12px auto 0;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 22px;
     }
 
     .cta-btn {
@@ -143,6 +201,18 @@
       background-color: var(--teal);
       color: white;
       transform: scale(1.05);
+    }
+
+    .cta-btn.secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.7);
+      margin-top: 25px;
+    }
+
+    .cta-btn.secondary:hover {
+      background: rgba(255,255,255,0.15);
+      color: white;
     }
 
     /* Content Sections */
@@ -271,6 +341,7 @@
     <div class="logo">
       <img src="TW_logo.png" alt="TutorWise Logo" />
     </div>
+
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
@@ -278,13 +349,28 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a></li>
     </ul>
+
+    <!-- NEW: Nav phone + call button -->
+    <div class="nav-cta">
+      <a class="phone-link" href="tel:+14166190043">416-619-0043</a>
+      <a class="call-cta" href="tel:+14166190043">Call Now</a>
+    </div>
+
     <div class="menu-toggle" id="menu-toggle">☰</div>
   </nav>
 
   <!-- Hero -->
   <header>
     <h1>From Struggle to Success — The Wise Way</h1>
-    <a href="#contact" class="cta-btn">Get Your Free 15-Minute Parent Strategy Call</a>
+    <p class="hero-subtext">
+      In-person K–12 tutoring in Brampton. Support for Math, English, Science, IEP & ESL — with a plan that actually fits your child.
+    </p>
+
+    <!-- NEW: Two hero CTAs -->
+    <div class="hero-cta-row">
+      <a href="tel:+14166190043" class="cta-btn">Call Now: 416-619-0043</a>
+      <a href="#contact" class="cta-btn secondary">Book a Free 15-Min Parent Call</a>
+    </div>
   </header>
 
   <!-- Welcome Section -->
@@ -297,7 +383,7 @@
     </p>
   </section>
 
-  <!-- Why Choose Us -->
+  <!-- What We Offer -->
   <section>
     <h2>What We Offer</h2>
     <ul class="info-list">
@@ -326,8 +412,17 @@
 
       <div class="contact-card">
         <h3>📞 Call Us</h3>
-        <p>416-619-0043</p>
-        <button class="contact-btn" onclick="window.location.href='tel:4166190043'">Call Now</button>
+
+        <!-- NEW: clickable phone + call hours -->
+        <p>
+          <a href="tel:+14166190043" style="color: inherit; text-decoration: none; font-weight: 700;">
+            416-619-0043
+          </a>
+        </p>
+        <p style="font-size: 0.95rem; color: #333;">Call hours: Mon–Fri 3pm–8pm • Sat 10am–2pm</p>
+
+        <!-- UPDATED: consistent tel format -->
+        <button class="contact-btn" onclick="window.location.href='tel:+14166190043'">Call Now</button>
       </div>
 
       <div class="contact-card">
@@ -373,3 +468,4 @@
 
 </body>
 </html>
+```
