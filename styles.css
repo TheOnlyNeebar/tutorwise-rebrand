@@ -124,6 +124,19 @@ nav{
 
 .menu-toggle:hover{background:rgba(0,0,0,0.04);}
 
+/* ===== Mobile-only menu items ===== */
+.mobile-only { display: none; }
+
+/* Contact card button alignment */
+.contact-card{
+  display:flex;
+  flex-direction:column;
+}
+.contact-card .contact-btn{
+  margin-top:auto;
+}
+
+
 /* ===== Page header / hero ===== */
 .page-hero{
   text-align:center;
@@ -338,6 +351,9 @@ footer a:hover{text-decoration:underline;}
 
 @media (max-width: 768px){
   .menu-toggle{display:block;}
+  .nav-cta { display: none; }      /* hide desktop CTA on phones */
+  .mobile-only { display: block; } /* show Calendly inside menu */
+  .menu-toggle{ margin-left:auto; }
   .nav-cta{gap:8px;}
   .nav-btn{padding:10px 12px;}
   .nav-links{
