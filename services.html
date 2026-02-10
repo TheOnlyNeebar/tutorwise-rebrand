@@ -5,254 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TutorWise | Our Services</title>
   <meta name="description" content="Explore TutorWise's range of tutoring services for K–12 students in Brampton. Personalized support for Math, English, Science, French, IEP, and ESL learners." />
+  <link rel="canonical" href="https://tutorwise.ca/services.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TutorWise" />
+  <meta property="og:title" content="TutorWise | Services" />
+  <meta property="og:description" content="Explore TutorWise tutoring services for K–12 students in Brampton, including Math, English, Science, IEP, ESL, and exam prep." />
+  <meta property="og:url" content="https://tutorwise.ca/services.html" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="TutorWise | Services" />
+  <meta name="twitter:description" content="Explore TutorWise tutoring services for K–12 students in Brampton, including Math, English, Science, IEP, ESL, and exam prep." />
+
   <link rel="icon" href="faviconTW.png" type="image/png" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@500;700&family=Chewy&display=swap" rel="stylesheet">
+  <!-- Fonts (shared) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Chewy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 
-  <style>
-    :root {
-      --teal: #2a9d8f;
-      --blue: #00357a;
-      --white: #ffffff;
-      --gray: #f7f9fb;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--white);
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* NAVIGATION (Matches Index) */
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 25px;
-      background-color: var(--white);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo img {
-      height: 55px;
-      width: auto;
-      animation: logoFade 1s ease-out;
-    }
-
-    @keyframes logoFade {
-      from { opacity: 0; transform: scale(0.8) rotate(-5deg); }
-      to { opacity: 1; transform: scale(1) rotate(0); }
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--blue);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 8px;
-      transition: all 0.25s ease;
-    }
-
-    .nav-links a:hover {
-      background-color: var(--teal);
-      color: var(--white);
-      transform: scale(1.1);
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 26px;
-      cursor: pointer;
-      color: var(--blue);
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: var(--white);
-        position: absolute;
-        top: 65px;
-        right: 0;
-        width: 100%;
-        padding: 20px 0;
-        border-top: 2px solid var(--teal);
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links a {
-        text-align: center;
-        padding: 12px;
-      }
-    }
-
-    /* HEADER */
-    header {
-      text-align: center;
-      padding: 70px 20px;
-      background: linear-gradient(135deg, var(--teal), var(--blue));
-      color: white;
-    }
-
-    header h1 {
-      font-family: 'Chewy', cursive;
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 400;
-    }
-
-    /* SECTIONS */
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 40px 30px;
-      background-color: var(--white);
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    section h2 {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--blue);
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-
-    section p {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1rem;
-      color: #444;
-      text-align: center;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      background: rgba(42, 157, 143, 0.1);
-      padding: 10px 15px;
-      margin: 8px 0;
-      border-radius: 8px;
-      font-family: 'Roboto', sans-serif;
-      transition: 0.3s ease;
-    }
-
-    li:hover {
-      background: rgba(42, 157, 143, 0.2);
-      transform: scale(1.02);
-    }
-
-    /* FAQ */
-    .faq-item {
-      margin-bottom: 15px;
-    }
-
-    .faq-item h4 {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--teal);
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .faq-item h4:hover {
-      color: var(--blue);
-    }
-
-    .faq-item p {
-      display: none;
-      margin-top: 8px;
-      color: #555;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      background-color: var(--blue);
-      color: white;
-      font-size: 0.9rem;
-      margin-top: 50px;
-    }
-
-    footer a {
-      color: var(--teal);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 
 <body>
-
-  <!-- Navigation -->
   <nav>
     <div class="logo">
-      <img src="TW_logo.png" alt="TutorWise Logo" />
+      <a href="index.html" aria-label="TutorWise Home">
+        <img src="TW_logo.png" alt="TutorWise Logo" />
+      </a>
     </div>
+
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank" rel="noopener">Facebook</a></li>
     </ul>
+
+    <div class="nav-cta">
+      <a class="phone-link" href="tel:+14166190043">416-619-0043</a>
+      <a class="nav-btn" href="https://calendly.com/tutorwise-canada/consultation-call" target="_blank" rel="noopener">Book a Free 15-Minute Call</a>
+    </div>
+
     <div class="menu-toggle" id="menu-toggle">☰</div>
   </nav>
 
-  <!-- Header -->
-  <header>
+
+  <header class="page-hero">
     <h1>Our Services</h1>
     <p>Helping students from kindergarten to high school reach their full potential.</p>
   </header>
 
-  <!-- Tutoring Overview -->
   <section>
     <h2>Personalized Tutoring for K–12 Students</h2>
-    <p>We tailor our approach for every student — from early learners to high school graduates. Whether it’s building confidence in math, improving reading skills, or preparing for exams, TutorWise helps every child learn “the wise way.”</p>
+    <p>
+      We tailor our approach for every student — from early learners to high school graduates.
+      Whether it’s building confidence in math, improving reading skills, or preparing for exams,
+      TutorWise helps every child learn “the wise way.”
+    </p>
   </section>
 
-  <!-- Grade Levels -->
   <section>
     <h2>We Teach All Grade Levels</h2>
-    <ul>
+    <ul class="info-list">
       <li>Kindergarten – Grade 1</li>
       <li>Grades 2 – 5</li>
       <li>Grades 6 – 8 (Middle School)</li>
@@ -260,65 +77,51 @@
     </ul>
   </section>
 
-  <!-- Subjects -->
   <section>
     <h2>Subjects We Cover</h2>
-    <ul>
-      <li>Mathematics (Basic, Advanced, Calculus)</li>
-      <li>English Language & Writing Skills</li>
+    <ul class="info-list">
+      <li>Mathematics (Foundations to Calculus)</li>
+      <li>English Language &amp; Writing Skills</li>
       <li>Science (Biology, Chemistry, Physics)</li>
       <li>French Language Studies</li>
-      <li>Reading & Literacy Development</li>
+      <li>Reading &amp; Literacy Development</li>
       <li>EQAO, OSSLT, and Exam Preparation</li>
-      <li>University & College Entrance Readiness</li>
+      <li>University &amp; College Entrance Readiness</li>
     </ul>
   </section>
 
-  <!-- How TutorWise Works -->
   <section>
     <h2>How TutorWise Works</h2>
-    <p>We start with a free in-person assessment to identify your child’s unique learning needs. Then, we create a personalized tutoring plan and pair your child with an experienced TutorWise educator. Regular updates, skill tracking, and strong communication ensure visible progress and lasting results.</p>
+    <p>
+      We start with an assessment to identify your child’s strengths and challenges. Then, we create a personalized tutoring plan
+      and pair your child with an experienced TutorWise educator. Regular updates and skill tracking help ensure visible progress and lasting results.
+    </p>
   </section>
 
-  <!-- FAQ -->
-  <section class="faq">
+  <section>
     <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h4>How do I get started?</h4>
-      <p>Call or visit us to schedule a free evaluation. We’ll assess your child’s strengths and challenges and create a custom plan.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Do you offer one-on-one tutoring?</h4>
+
+    <div class="blog-card" style="max-width:850px;margin:0 auto;">
+      <h3>How do I get started?</h3>
+      <p>Call or contact us to schedule a free evaluation. We’ll assess your child’s needs and create a custom plan.</p>
+      <hr style="border:0;border-top:1px solid rgba(0,0,0,0.08);margin:16px 0;">
+      <h3>Do you offer one-on-one tutoring?</h3>
       <p>Yes — every session is one-on-one and customized to your child’s goals.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Can you help with multiple subjects?</h4>
-      <p>Absolutely! We can support students across several subjects in their tutoring plan.</p>
-    </div>
-    <div class="faq-item">
-      <h4>How often should sessions be scheduled?</h4>
+      <hr style="border:0;border-top:1px solid rgba(0,0,0,0.08);margin:16px 0;">
+      <h3>Can you help with multiple subjects?</h3>
+      <p>Absolutely. We can support students across several subjects within their tutoring plan.</p>
+      <hr style="border:0;border-top:1px solid rgba(0,0,0,0.08);margin:16px 0;">
+      <h3>How often should sessions be scheduled?</h3>
       <p>We recommend at least two sessions weekly for consistent progress, but plans are flexible.</p>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    &copy; 2025 TutorWise. All rights reserved.<br />
-    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Visit us on Facebook</a>
+    &copy; 2026 TutorWise. All rights reserved.<br />
+    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank" rel="noopener">Visit us on Facebook</a>
   </footer>
 
-  <!-- JS -->
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const links = document.getElementById("nav-links");
-    toggle.addEventListener("click", () => links.classList.toggle("active"));
+  <script src="script.js"></script>
 
-    document.querySelectorAll('.faq-item h4').forEach(item => {
-      item.addEventListener('click', () => {
-        const p = item.nextElementSibling;
-        p.style.display = p.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-  </script>
 </body>
 </html>

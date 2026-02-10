@@ -2,386 +2,80 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NQC9CLK0BT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NQC9CLK0BT');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQC9CLK0BT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NQC9CLK0BT');
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TutorWise | Brampton Tutoring Services</title>
   <meta name="description" content="TutorWise offers personalized in-person tutoring in Brampton for K–12 students. Book a Free 15-Minute Parent Strategy Call today and help your child reach their full potential!" />
-  <meta name="keywords" content="tutorwise, brampton tutoring, math tutor, english tutor, science tutor, IEP help, ESL tutoring, one-on-one tutoring" />
-  <meta name="author" content="TutorWise" />
+  <link rel="canonical" href="https://tutorwise.ca/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TutorWise" />
+  <meta property="og:title" content="TutorWise | Brampton Tutoring Services" />
+  <meta property="og:description" content="Personalized in-person K–12 tutoring in Brampton. Book a free 15-minute call and get a plan that fits your child." />
+  <meta property="og:url" content="https://tutorwise.ca/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="TutorWise | Brampton Tutoring Services" />
+  <meta name="twitter:description" content="Personalized in-person K–12 tutoring in Brampton. Book a free 15-minute call and get a plan that fits your child." />
 
   <link rel="icon" href="faviconTW.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Chewy&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --teal: #2a9d8f;
-      --blue: #00357a;
-      --white: #ffffff;
-      --gray: #f7f9fb;
-    }
+  <!-- Fonts (shared) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Chewy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--white);
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* Navigation */
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 25px;
-      background-color: var(--white);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo img {
-      height: 55px;
-      width: auto;
-      animation: logoFade 1s ease-out;
-    }
-
-    @keyframes logoFade {
-      from { opacity: 0; transform: scale(0.8) rotate(-5deg); }
-      to { opacity: 1; transform: scale(1) rotate(0); }
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--blue);
-      font-weight: 600;
-      transition: all 0.25s ease;
-      padding: 8px 14px;
-      border-radius: 8px;
-    }
-
-    .nav-links a:hover {
-      background-color: var(--teal);
-      color: white;
-      transform: scale(1.1);
-    }
-
-    /* NEW: Nav CTA (phone + call button) */
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .phone-link {
-      text-decoration: none;
-      color: var(--blue);
-      font-weight: 700;
-      padding: 8px 12px;
-      border-radius: 8px;
-      border: 2px solid rgba(0, 53, 122, 0.12);
-      transition: 0.25s ease;
-    }
-
-    .phone-link:hover {
-      background: rgba(42, 157, 143, 0.12);
-      border-color: rgba(42, 157, 143, 0.35);
-    }
-
-    .call-cta {
-      text-decoration: none;
-      background: var(--blue);
-      color: white;
-      font-weight: 700;
-      padding: 10px 14px;
-      border-radius: 10px;
-      transition: 0.25s ease;
-      white-space: nowrap;
-    }
-
-    .call-cta:hover {
-      background: var(--teal);
-      transform: scale(1.03);
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 26px;
-      cursor: pointer;
-      color: var(--blue);
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: var(--white);
-        position: absolute;
-        top: 65px;
-        right: 0;
-        width: 100%;
-        padding: 20px 0;
-        border-top: 2px solid var(--teal);
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links a {
-        text-align: center;
-        padding: 12px;
-      }
-
-      /* keep it clean on mobile */
-      .phone-link { display: none; }
-    }
-
-    /* Hero Section */
-    header {
-      text-align: center;
-      padding: 70px 20px;
-      background: linear-gradient(135deg, var(--teal), var(--blue));
-      color: white;
-    }
-
-    header h1 {
-      font-family: 'Chewy', cursive;
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    /* NEW: hero subtext + two CTAs */
-    .hero-subtext {
-      max-width: 760px;
-      margin: 12px auto 0;
-      font-size: 1.1rem;
-      opacity: 0.95;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 22px;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      padding: 14px 24px;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--blue);
-      background-color: var(--white);
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s ease;
-      margin-top: 25px;
-    }
-
-    .cta-btn:hover {
-      background-color: var(--teal);
-      color: white;
-      transform: scale(1.05);
-    }
-
-    .cta-btn.secondary {
-      background: transparent;
-      color: white;
-      border: 2px solid rgba(255,255,255,0.7);
-      margin-top: 25px;
-    }
-
-    .cta-btn.secondary:hover {
-      background: rgba(255,255,255,0.15);
-      color: white;
-    }
-
-    /* Content Sections */
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 40px 30px;
-      background-color: var(--white);
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    section h2 {
-      color: var(--blue);
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-
-    section p {
-      font-size: 1.1rem;
-      color: #444;
-      text-align: center;
-    }
-
-    .info-list {
-      list-style: none;
-      margin-top: 20px;
-    }
-
-    .info-list li {
-      background: rgba(42, 157, 143, 0.1);
-      padding: 10px 15px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    /* Contact Section */
-    #contact {
-      text-align: center;
-      background-color: var(--gray);
-      border-radius: 12px;
-      padding: 50px 30px;
-    }
-
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    .contact-card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-      width: 260px;
-    }
-
-    .contact-card h3 {
-      color: var(--blue);
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .contact-card p {
-      color: black;
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      padding: 10px 18px;
-      background-color: var(--blue);
-      color: white;
-      font-weight: 600;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .contact-btn:hover {
-      background-color: var(--teal);
-      transform: scale(1.05);
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 350px;
-      border: none;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      background-color: var(--blue);
-      color: white;
-      font-size: 0.9rem;
-      margin-top: 50px;
-    }
-
-    footer a {
-      color: var(--teal);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta name="keywords" content="tutorwise, brampton tutoring, math tutor, english tutor, science tutor, IEP help, ESL tutoring, one-on-one tutoring" />
+  <meta name="author" content="TutorWise" />
 </head>
 
 <body>
-
-  <!-- Navigation -->
   <nav>
     <div class="logo">
-      <img src="TW_logo.png" alt="TutorWise Logo" />
+      <a href="index.html" aria-label="TutorWise Home">
+        <img src="TW_logo.png" alt="TutorWise Logo" />
+      </a>
     </div>
 
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank" rel="noopener">Facebook</a></li>
     </ul>
 
-    <!-- NEW: Nav phone + call button -->
     <div class="nav-cta">
       <a class="phone-link" href="tel:+14166190043">416-619-0043</a>
-      <a class="call-cta" href="tel:+14166190043">Call Now</a>
+      <a class="nav-btn" href="https://calendly.com/tutorwise-canada/consultation-call" target="_blank" rel="noopener">Book a Free 15-Minute Call</a>
     </div>
 
     <div class="menu-toggle" id="menu-toggle">☰</div>
   </nav>
 
-  <!-- Hero -->
-  <header>
+
+  <header class="page-hero">
     <h1>From Struggle to Success — The Wise Way</h1>
-    <p class="hero-subtext">
-      In-person K–12 tutoring in Brampton. Support for Math, English, Science, IEP & ESL — with a plan that actually fits your child.
+    <p>
+      In-person K–12 tutoring in Brampton. Support for Math, English, Science, IEP &amp; ESL — with a plan that actually fits your child.
     </p>
 
-    <!-- NEW: Two hero CTAs -->
     <div class="hero-cta-row">
-      <a href="tel:+14166190043" class="cta-btn">Call Now: 416-619-0043</a>
-      <a href="#contact" class="cta-btn secondary">Book a Free 15-Min Parent Call</a>
+      <a href="tel:+14166190043" class="btn btn-primary">Call Now: 416-619-0043</a>
+      <a href="https://calendly.com/tutorwise-canada/consultation-call" target="_blank" rel="noopener" class="btn btn-secondary">Book a Free 15-Minute Call</a>
     </div>
   </header>
 
-  <!-- Welcome Section -->
   <section>
     <h2>Welcome to TutorWise</h2>
     <p>
@@ -391,13 +85,12 @@
     </p>
   </section>
 
-  <!-- What We Offer -->
   <section>
     <h2>What We Offer</h2>
     <ul class="info-list">
       <li>Curriculum-Based Teaching</li>
       <li>Enhance Learning Skills</li>
-      <li>Dedicated Support for IEP & ESL Students</li>
+      <li>Dedicated Support for IEP &amp; ESL Students</li>
       <li>Earn High School Credits</li>
       <li>Preparation for IB and Gifted Programs</li>
       <li>One-On-One Tutoring</li>
@@ -407,29 +100,19 @@
     </ul>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Get in Touch</h2>
 
     <div class="contact-grid">
       <div class="contact-card">
         <h3>📍 Visit Us</h3>
-        <p>14 Automatic Rd, Unit #34<br>Brampton, ON L6S 5N5</p>
-        <button class="contact-btn" onclick="window.open('https://maps.google.com/?q=14+Automatic+Rd+Unit+34+Brampton+ON+L6S+5N5','_blank')">View on Map</button>
+        <p>14 Automatic Rd, Unit 32<br>Brampton, ON L6S 5N5</p>
+        <button class="contact-btn" onclick="window.open('https://maps.google.com/?q=14+Automatic+Rd+Unit+32+Brampton+ON+L6S+5N5','_blank')">View on Map</button>
       </div>
 
       <div class="contact-card">
         <h3>📞 Call Us</h3>
-
-        <!-- NEW: clickable phone + call hours -->
-        <p>
-          <a href="tel:+14166190043" style="color: inherit; text-decoration: none; font-weight: 700;">
-            416-619-0043
-          </a>
-        </p>
-        <p style="font-size: 0.95rem; color: #333;">Call hours: Mon–Fri 3pm–8pm • Sat 10am–2pm</p>
-
-        <!-- UPDATED: consistent tel format -->
+        <p><a href="tel:+14166190043" style="color:inherit;text-decoration:none;font-weight:800;">416-619-0043</a></p>
         <button class="contact-btn" onclick="window.location.href='tel:+14166190043'">Call Now</button>
       </div>
 
@@ -440,40 +123,20 @@
       </div>
     </div>
 
-    <!-- Google Maps Embed -->
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9303249947825!2d-79.70829632339069!3d43.66662065034552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3fba6c26d0ab%3A0xf1f1f1bbd2f792f!2s14%20Automatic%20Rd%20%2334%2C%20Brampton%2C%20ON%20L6S%205N5!5e0!3m2!1sen!2sca!4v1692989098445!5m2!1sen!2sca"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+    <div style="max-width:650px;margin:0 auto;">
+      <a class="btn btn-primary" href="https://calendly.com/tutorwise-canada/consultation-call" target="_blank" rel="noopener" style="margin-top:6px;">
+        Book a Free 15-Minute Call
+      </a>
+      <iframe class="map-embed" src="https://www.google.com/maps?q=14+Automatic+Rd+Unit+32+Brampton+ON+L6S+5N5&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    &copy; 2025 TutorWise. All rights reserved.<br />
-    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Visit us on Facebook</a>
+    &copy; 2026 TutorWise. All rights reserved.<br />
+    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank" rel="noopener">Visit us on Facebook</a>
   </footer>
 
-  <!-- Script -->
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const links = document.getElementById("nav-links");
-
-    toggle.addEventListener("click", () => {
-      links.classList.toggle("active");
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth"
-        });
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
-```
